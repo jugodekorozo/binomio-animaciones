@@ -119,8 +119,8 @@ export default function Workflow() {
 
       {/* Footer */}
       <div className="mt-12 pt-8 border-t border-bg-alt text-center">
-        <p className="font-display italic text-primary text-lg mb-1">Areandina · Diseño Gráfico · Valledupar</p>
-        <p className="text-muted text-xs">Documento de trabajo — Sujeto a ajustes según fecha del evento · 2026</p>
+        <p className="font-display italic text-primary text-lg mb-1">Programa de Diseño Gráfico Areandina Valledupar</p>
+        <p className="text-muted text-xs">Documento de trabajo — Sujeto a ajustes según fecha del evento · Revisado 26 de marzo de 2026</p>
       </div>
     </div>
   )

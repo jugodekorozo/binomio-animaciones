@@ -30,14 +30,14 @@ export default function Technique() {
       {/* Principle card */}
       <div className="glass-dark rounded-2xl p-5 mb-8 flex gap-4 items-start text-white">
         <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-accent/20 flex items-center justify-center">
-          <Info size={20} className="text-accent" />
+          <Info size={20} className="text-white" />
         </div>
         <div>
           <p className="font-semibold text-white mb-1">Principio de la técnica</p>
           <p className="text-white/75 text-sm leading-relaxed">
             Se dibujan pocas poses clave (3–5 por pieza de 10 seg) y se importan a After Effects. El efecto{' '}
-            <span className="text-accent font-semibold">Turbulent Displace</span> con un{' '}
-            <span className="text-accent font-semibold">Random Seed animado</span> genera variaciones sutiles por
+            <span className="text-white font-semibold">Turbulent Displace</span> con un{' '}
+            <span className="text-white font-semibold">Random Seed animado</span> genera variaciones sutiles por
             fotograma, simulando el temblor característico de la animación tradicional cuadro a cuadro.
           </p>
         </div>

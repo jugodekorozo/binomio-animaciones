@@ -5,9 +5,43 @@ export const departments = [
     color: '#cd5f2a',
     icon: 'Star',
     members: [
-      { name: 'Prof. Odis',    role: 'Director Creativo · Supervisor de animación', confirmed: true },
-      { name: 'Peter',         role: 'Director',                                   confirmed: true },
-      { name: 'Frank',         role: 'Productor',                                  confirmed: true },
+      {
+        name: 'Prof. Odis',
+        role: 'Director Creativo · Supervisor de animación',
+        confirmed: true,
+        tasks: [
+          'Definir y mantener la visión creativa del proyecto',
+          'Supervisar y aprobar storyboards, poses clave y composiciones',
+          'Guiar la dirección de arte y el estilo visual de cada pieza',
+          'Revisar animaciones en cada fase de producción',
+          'Dar retroalimentación directa a cada dupla de trabajo',
+          'Aprobar los renders finales antes de la entrega',
+        ],
+      },
+      {
+        name: 'Peter',
+        role: 'Director',
+        confirmed: true,
+        tasks: [
+          'Coordinar el equipo de producción día a día',
+          'Velar por el cumplimiento del cronograma de 15 días',
+          'Gestionar la comunicación entre departamentos',
+          'Resolver bloqueos y tomar decisiones operativas',
+          'Reportar avances al director creativo',
+        ],
+      },
+      {
+        name: 'Frank',
+        role: 'Productor',
+        confirmed: true,
+        tasks: [
+          'Organizar y mantener la estructura de archivos del proyecto',
+          'Gestionar la entrega y versioning de assets',
+          'Coordinar la logística de renders y exportaciones',
+          'Consolidar los entregables de cada dupla',
+          'Preparar el paquete final para entrega al evento',
+        ],
+      },
     ],
   },
   {
@@ -16,9 +50,20 @@ export const departments = [
     color: '#f2ab37',
     icon: 'Palette',
     members: [
-      { name: 'Ana',           role: 'Directora de Arte',    confirmed: true  },
-      { name: 'Pendiente',     role: 'Diseñador/a de Personajes', confirmed: false },
-      { name: 'Pendiente',     role: 'Diseñador/a de Fondos',    confirmed: false },
+      {
+        name: 'Ana',
+        role: 'Directora de Arte',
+        confirmed: true,
+        tasks: [
+          'Crear y distribuir la guía de estilo visual del proyecto',
+          'Definir paleta de color, tipografía e iconografía',
+          'Supervisar el diseño de personajes y fondos',
+          'Garantizar coherencia visual entre todas las piezas',
+          'Aprobar assets antes de que entren a After Effects',
+        ],
+      },
+      { name: 'Pendiente', role: 'Diseñador/a de Personajes', confirmed: false },
+      { name: 'Pendiente', role: 'Diseñador/a de Fondos',    confirmed: false },
     ],
   },
   {
@@ -27,7 +72,7 @@ export const departments = [
     color: '#2E86AB',
     icon: 'Zap',
     members: [
-      { name: 'Pendiente',     role: 'Motion Graphics Designer', confirmed: false },
+      { name: 'Pendiente', role: 'Motion Graphics Designer', confirmed: false },
     ],
   },
   {
@@ -36,7 +81,7 @@ export const departments = [
     color: '#A23B72',
     icon: 'BookOpen',
     members: [
-      { name: 'Pendiente',     role: 'Storyboard Artist',    confirmed: false },
+      { name: 'Pendiente', role: 'Storyboard Artist', confirmed: false },
     ],
   },
   {
@@ -45,11 +90,71 @@ export const departments = [
     color: '#21181b',
     icon: 'Film',
     members: [
-      { name: 'Andrés',        role: 'Animador',             confirmed: true },
-      { name: 'Diego',         role: 'Animador',             confirmed: true },
-      { name: 'Moreno / Troya', role: 'Animador',            confirmed: true },
-      { name: 'Salas',         role: 'Animador',             confirmed: true },
-      { name: 'Segurido',      role: 'Animador',             confirmed: true },
+      {
+        name: 'Andrés',
+        role: 'Animador',
+        confirmed: true,
+        tasks: [
+          'Dibujar poses clave (3–5 por pieza) en papel o Procreate',
+          'Digitalizar y limpiar ilustraciones en Photoshop/Illustrator',
+          'Importar secuencias a After Effects con capas separadas',
+          'Animar posiciones y escalas entre poses clave',
+          'Aplicar efecto Turbulent Displace con Random Seed animado',
+          'Componer fondos, tipografía y transiciones de su pieza',
+        ],
+      },
+      {
+        name: 'Diego',
+        role: 'Animador',
+        confirmed: true,
+        tasks: [
+          'Dibujar poses clave (3–5 por pieza) en papel o Procreate',
+          'Digitalizar y limpiar ilustraciones en Photoshop/Illustrator',
+          'Importar secuencias a After Effects con capas separadas',
+          'Animar posiciones y escalas entre poses clave',
+          'Aplicar efecto Turbulent Displace con Random Seed animado',
+          'Componer fondos, tipografía y transiciones de su pieza',
+        ],
+      },
+      {
+        name: 'Moreno / Troya',
+        role: 'Animador',
+        confirmed: true,
+        tasks: [
+          'Dibujar poses clave (3–5 por pieza) en papel o Procreate',
+          'Digitalizar y limpiar ilustraciones en Photoshop/Illustrator',
+          'Importar secuencias a After Effects con capas separadas',
+          'Animar posiciones y escalas entre poses clave',
+          'Aplicar efecto Turbulent Displace con Random Seed animado',
+          'Componer fondos, tipografía y transiciones de su pieza',
+        ],
+      },
+      {
+        name: 'Salas',
+        role: 'Animador',
+        confirmed: true,
+        tasks: [
+          'Dibujar poses clave (3–5 por pieza) en papel o Procreate',
+          'Digitalizar y limpiar ilustraciones en Photoshop/Illustrator',
+          'Importar secuencias a After Effects con capas separadas',
+          'Animar posiciones y escalas entre poses clave',
+          'Aplicar efecto Turbulent Displace con Random Seed animado',
+          'Componer fondos, tipografía y transiciones de su pieza',
+        ],
+      },
+      {
+        name: 'Segurido',
+        role: 'Animador',
+        confirmed: true,
+        tasks: [
+          'Dibujar poses clave (3–5 por pieza) en papel o Procreate',
+          'Digitalizar y limpiar ilustraciones en Photoshop/Illustrator',
+          'Importar secuencias a After Effects con capas separadas',
+          'Animar posiciones y escalas entre poses clave',
+          'Aplicar efecto Turbulent Displace con Random Seed animado',
+          'Componer fondos, tipografía y transiciones de su pieza',
+        ],
+      },
     ],
   },
   {
@@ -58,7 +163,7 @@ export const departments = [
     color: '#C73E1D',
     icon: 'Layers',
     members: [
-      { name: 'Pendiente',     role: 'Compositor · Motion Graphics', confirmed: false },
+      { name: 'Pendiente', role: 'Compositor · Motion Graphics', confirmed: false },
     ],
   },
   {
@@ -67,8 +172,30 @@ export const departments = [
     color: '#3B1F2B',
     icon: 'Music',
     members: [
-      { name: 'Mabel',         role: 'Sound Designer',       confirmed: true },
-      { name: 'Adrián Morgas', role: 'Sound Designer',       confirmed: true },
+      {
+        name: 'Mabel',
+        role: 'Sound Designer',
+        confirmed: true,
+        tasks: [
+          'Seleccionar fragmentos musicales del Binomio de Oro para las piezas',
+          'Diseñar y editar efectos de sonido (SFX) para cada animación',
+          'Sincronizar audio con el ritmo y timing de las animaciones',
+          'Entregar stems de audio en el formato requerido por After Effects',
+          'Participar en la revisión de postproducción (día 12–13)',
+        ],
+      },
+      {
+        name: 'Adrián Morgas',
+        role: 'Sound Designer',
+        confirmed: true,
+        tasks: [
+          'Co-diseñar la identidad sonora del proyecto junto a Mabel',
+          'Realizar el mixing y balance final de audio en todas las piezas',
+          'Garantizar niveles de audio apropiados para reproducción en evento',
+          'Revisión técnica: codec de audio, sincronización, duración exacta',
+          'Exportar versiones finales de audio en los formatos requeridos',
+        ],
+      },
     ],
   },
 ]

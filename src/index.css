@@ -75,6 +75,22 @@
   100% { transform: translateX(260%) skewX(-15deg); opacity: 0; }
 }
 
+/* Subtle grid texture for light sections */
+.texture-light {
+  background-image:
+    linear-gradient(rgba(33, 24, 27, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(33, 24, 27, 0.055) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Subtle grid texture for dark sections (apply opacity on the element itself) */
+.texture-dark {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.8) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.8) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
 /* ─── App-layer components ───────────────────────────────────────── */
 
 @layer components {

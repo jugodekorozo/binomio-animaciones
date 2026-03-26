@@ -30,31 +30,31 @@ export default function App() {
           <Hero scrollTo={scrollTo} />
         </section>
 
-        <section ref={sectionRefs.cronograma} id="cronograma" className="bg-bg-alt">
+        <section ref={sectionRefs.cronograma} id="cronograma" className="relative bg-bg-alt texture-light">
           <div className="section-pad">
             <Timeline />
           </div>
         </section>
 
-        <section ref={sectionRefs.investigacion} id="investigacion">
+        <section ref={sectionRefs.investigacion} id="investigacion" className="relative bg-bg texture-light">
           <div className="section-pad">
             <Research />
           </div>
         </section>
 
-        <section ref={sectionRefs.tecnica} id="tecnica" className="bg-bg-alt">
+        <section ref={sectionRefs.tecnica} id="tecnica" className="relative bg-bg-alt texture-light">
           <div className="section-pad">
             <Technique />
           </div>
         </section>
 
-        <section ref={sectionRefs.equipo} id="equipo">
+        <section ref={sectionRefs.equipo} id="equipo" className="relative bg-bg texture-light">
           <div className="section-pad">
             <Team />
           </div>
         </section>
 
-        <section ref={sectionRefs.flujo} id="flujo" className="bg-bg-alt">
+        <section ref={sectionRefs.flujo} id="flujo" className="relative bg-bg-alt texture-light">
           <div className="section-pad">
             <Workflow />
           </div>
