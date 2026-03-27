@@ -62,7 +62,19 @@ export const departments = [
           'Aprobar assets antes de que entren a After Effects',
         ],
       },
-      { name: 'Pendiente', role: 'Diseñador/a de Personajes', confirmed: false },
+      {
+        name: 'Moreno / Troya',
+        role: 'Diseñador/a de Personajes',
+        confirmed: true,
+        tasks: [
+          'Diseñar los personajes principales según los ejes narrativos de cada pieza',
+          'Crear turnarounds y poses de referencia para los animadores',
+          'Mantener coherencia visual de personajes con la guía de estilo de Ana',
+          'Digitalizar diseños en Illustrator con capas separadas por elemento',
+          'Entregar paquetes de personajes listos para importar a After Effects',
+          'Ajustar diseños según retroalimentación del Director Creativo',
+        ],
+      },
       { name: 'Pendiente', role: 'Diseñador/a de Fondos',    confirmed: false },
     ],
   },
@@ -129,19 +141,6 @@ export const departments = [
         ],
       },
       {
-        name: 'Moreno / Troya',
-        role: 'Animador',
-        confirmed: true,
-        tasks: [
-          'Dibujar poses clave (3–5 por pieza) en papel o Procreate',
-          'Digitalizar y limpiar ilustraciones en Photoshop/Illustrator',
-          'Importar secuencias a After Effects con capas separadas',
-          'Animar posiciones y escalas entre poses clave',
-          'Aplicar efecto Turbulent Displace con Random Seed animado',
-          'Componer fondos, tipografía y transiciones de su pieza',
-        ],
-      },
-      {
         name: 'Salas',
         role: 'Animador',
         confirmed: true,
@@ -155,7 +154,7 @@ export const departments = [
         ],
       },
       {
-        name: 'Segurido',
+        name: 'Izquierdo',
         role: 'Animador',
         confirmed: true,
         tasks: [
