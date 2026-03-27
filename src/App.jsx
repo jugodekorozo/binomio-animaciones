@@ -5,14 +5,15 @@ import Timeline from './components/Timeline'
 import Research from './components/Research'
 import Technique from './components/Technique'
 import Team from './components/Team'
+import LogoBanner from './components/LogoBanner'
 
 export default function App() {
   const sectionRefs = {
     inicio:        useRef(null),
+    equipo:        useRef(null),
     cronograma:    useRef(null),
     investigacion: useRef(null),
     tecnica:       useRef(null),
-    equipo:        useRef(null),
   }
 
   const scrollTo = (key) => {
@@ -28,35 +29,37 @@ export default function App() {
           <Hero scrollTo={scrollTo} />
         </section>
 
-        <section ref={sectionRefs.cronograma} id="cronograma" className="relative bg-bg-alt texture-light">
+        <section ref={sectionRefs.equipo} id="equipo" className="relative bg-bg-alt texture-light">
+          <div className="section-pad">
+            <Team />
+          </div>
+        </section>
+
+        <section ref={sectionRefs.cronograma} id="cronograma" className="relative bg-bg texture-light">
           <div className="section-pad">
             <Timeline />
           </div>
         </section>
 
-        <section ref={sectionRefs.investigacion} id="investigacion" className="relative bg-bg texture-light">
+        <section ref={sectionRefs.investigacion} id="investigacion" className="relative bg-bg-alt texture-light">
           <div className="section-pad">
             <Research />
           </div>
         </section>
 
-        <section ref={sectionRefs.tecnica} id="tecnica" className="relative bg-bg-alt texture-light">
+        <section ref={sectionRefs.tecnica} id="tecnica" className="relative bg-bg texture-light">
           <div className="section-pad">
             <Technique />
           </div>
         </section>
-
-        <section ref={sectionRefs.equipo} id="equipo" className="relative bg-bg texture-light">
-          <div className="section-pad">
-            <Team />
-          </div>
-          {/* Footer */}
-          <div className="border-t border-bg-alt text-center py-8 px-6">
-            <p className="font-display italic text-primary text-lg mb-1">Programa de Diseño Gráfico Areandina Valledupar</p>
-            <p className="text-muted text-xs">Documento de trabajo — Sujeto a ajustes según fecha del evento · Revisado 26 de marzo de 2026</p>
-          </div>
-        </section>
       </main>
+
+      {/* Footer */}
+      <footer className="border-t border-bg-alt bg-bg text-center py-10 px-6">
+        <LogoBanner className="h-10 w-auto mx-auto mb-4 opacity-80" />
+        <p className="text-muted text-xs mb-1">Prof. Odis · ocorzo@areandina.edu.co</p>
+        <p className="text-muted text-xs">Documento de trabajo · Revisado 26 de marzo de 2026</p>
+      </footer>
     </div>
   )
 }

@@ -4,10 +4,10 @@ import LogoDG from './LogoDG'
 
 const navItems = [
   { key: 'inicio',        label: 'Inicio',    Icon: Home },
+  { key: 'equipo',        label: 'Equipo',    Icon: Users },
   { key: 'cronograma',    label: 'Días',      Icon: CalendarDays },
   { key: 'investigacion', label: 'Invest.',   Icon: BookOpen },
   { key: 'tecnica',       label: 'Técnica',   Icon: Layers },
-  { key: 'equipo',        label: 'Equipo',    Icon: Users },
 ]
 
 export default function Nav({ scrollTo, sectionRefs }) {
