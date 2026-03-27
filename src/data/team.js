@@ -81,7 +81,19 @@ export const departments = [
     color: '#A23B72',
     icon: 'BookOpen',
     members: [
-      { name: 'Pendiente', role: 'Storyboard Artist', confirmed: false },
+      {
+        name: 'Angello',
+        role: 'Storyboard Artist',
+        confirmed: true,
+        tasks: [
+          'Traducir los guiones a secuencias visuales (thumbnails)',
+          'Dibujar storyboards de cada pieza asignada (6–10 viñetas)',
+          'Definir composición, encuadre y movimiento de cámara',
+          'Colaborar con la Directora de Arte para mantener coherencia visual',
+          'Presentar storyboards para revisión en el día 7 (lun 6 abr)',
+          'Ajustar storyboards según retroalimentación antes de producción',
+        ],
+      },
     ],
   },
   {
@@ -173,7 +185,7 @@ export const departments = [
     icon: 'Music',
     members: [
       {
-        name: 'Mabel',
+        name: 'Maikol',
         role: 'Sound Designer',
         confirmed: true,
         tasks: [
@@ -185,7 +197,7 @@ export const departments = [
         ],
       },
       {
-        name: 'Adrián Morgas',
+        name: 'Adrián Murgas',
         role: 'Sound Designer',
         confirmed: true,
         tasks: [

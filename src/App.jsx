@@ -5,7 +5,6 @@ import Timeline from './components/Timeline'
 import Research from './components/Research'
 import Technique from './components/Technique'
 import Team from './components/Team'
-import Workflow from './components/Workflow'
 
 export default function App() {
   const sectionRefs = {
@@ -14,7 +13,6 @@ export default function App() {
     investigacion: useRef(null),
     tecnica:       useRef(null),
     equipo:        useRef(null),
-    flujo:         useRef(null),
   }
 
   const scrollTo = (key) => {
@@ -52,11 +50,10 @@ export default function App() {
           <div className="section-pad">
             <Team />
           </div>
-        </section>
-
-        <section ref={sectionRefs.flujo} id="flujo" className="relative bg-bg-alt texture-light">
-          <div className="section-pad">
-            <Workflow />
+          {/* Footer */}
+          <div className="border-t border-bg-alt text-center py-8 px-6">
+            <p className="font-display italic text-primary text-lg mb-1">Programa de Diseño Gráfico Areandina Valledupar</p>
+            <p className="text-muted text-xs">Documento de trabajo — Sujeto a ajustes según fecha del evento · Revisado 26 de marzo de 2026</p>
           </div>
         </section>
       </main>

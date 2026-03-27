@@ -13,7 +13,7 @@ export default function Timeline() {
   return (
     <div>
       <h2 className="section-title">Cronograma de Producción</h2>
-      <p className="section-subtitle">15 días · 5 fases · 4 duplas</p>
+      <p className="section-subtitle">17 días · 28 mar – 20 abr · 5 fases · 4 duplas</p>
 
       {/* Phase legend */}
       <div className="flex flex-wrap gap-2 mb-8">
@@ -42,15 +42,16 @@ export default function Timeline() {
               >
                 {/* Day number badge */}
                 <span
-                  className="flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold text-sm"
+                  className="flex-shrink-0 w-12 rounded-xl flex flex-col items-center justify-center py-1.5 text-white"
                   style={{ backgroundColor: phase.color }}
                 >
-                  {item.day}
+                  <span className="font-bold text-sm leading-tight">{item.day}</span>
+                  <span className="text-[9px] font-medium opacity-80 leading-tight">{item.date.split(' ').slice(1).join(' ')}</span>
                 </span>
 
                 <div className="flex-1 min-w-0">
                   <p className="text-xs font-semibold uppercase tracking-wide mb-0.5" style={{ color: phase.color }}>
-                    {item.phase}
+                    {item.phase} · <span className="normal-case font-normal">{item.date}</span>
                   </p>
                   <p className="text-ink text-sm font-medium truncate">{item.deliverable}</p>
                 </div>

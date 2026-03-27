@@ -1,9 +1,37 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronDown, Music, Landmark, Cpu, Film, Sparkles } from 'lucide-react'
+import { ChevronDown, Music, Landmark, Cpu, Film, Sparkles, Search, BookMarked, MessageSquareText, ArrowRight } from 'lucide-react'
 import { researchBlocks } from '../data/research'
 
 const iconMap = { Music, Landmark, Cpu, Film, Sparkles }
+
+const pipeline = [
+  {
+    name: 'Perplexity',
+    Icon: Search,
+    color: '#2E86AB',
+    role: 'Búsqueda y verificación con fuentes citadas',
+  },
+  {
+    name: 'NotebookLM',
+    Icon: BookMarked,
+    color: '#A23B72',
+    role: 'Síntesis y cruce de fuentes',
+  },
+  {
+    name: 'Claude',
+    Icon: MessageSquareText,
+    color: '#21181b',
+    role: 'Estructuración para producción',
+  },
+]
+
+const toolColors = {
+  'Perplexity':       '#2E86AB',
+  'NotebookLM':       '#A23B72',
+  'Claude':           '#21181b',
+  'Perplexity + Vimeo': '#2E86AB',
+}
 
 export default function Research() {
   const [openId, setOpenId] = useState(null)
@@ -13,12 +41,41 @@ export default function Research() {
   return (
     <div>
       <h2 className="section-title">Marco de Investigación</h2>
-      <p className="section-subtitle">5 ejes temáticos · Usa Perplexity y NotebookLM como fuentes principales</p>
+      <p className="section-subtitle">5 ejes temáticos · Pipeline Perplexity → NotebookLM → Claude</p>
 
+      {/* Compact pipeline */}
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-0 mb-8 card p-4">
+        {pipeline.map((tool, i) => {
+          const Icon = tool.Icon
+          const isLast = i === pipeline.length - 1
+          return (
+            <div key={tool.name} className="flex sm:flex-row items-center flex-1 gap-2 sm:gap-0">
+              <div className="flex items-center gap-2.5 flex-1 px-2 py-1">
+                <span
+                  className="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center"
+                  style={{ backgroundColor: tool.color }}
+                >
+                  <Icon size={15} className="text-white" strokeWidth={1.8} />
+                </span>
+                <div className="min-w-0">
+                  <p className="text-xs font-bold text-ink leading-tight">{tool.name}</p>
+                  <p className="text-[10px] text-muted leading-tight">{tool.role}</p>
+                </div>
+              </div>
+              {!isLast && (
+                <ArrowRight size={14} className="flex-shrink-0 text-muted/60 rotate-90 sm:rotate-0 mx-1" />
+              )}
+            </div>
+          )
+        })}
+      </div>
+
+      {/* Accordion blocks */}
       <div className="space-y-3">
         {researchBlocks.map((block) => {
           const Icon = iconMap[block.icon] || Music
           const isOpen = openId === block.id
+          const toolColor = toolColors[block.tool] || '#7a5c48'
 
           return (
             <div
@@ -44,7 +101,15 @@ export default function Research() {
                     </p>
                   )}
                   <p className="text-ink font-semibold text-sm leading-snug">{block.title}</p>
-                  <p className="text-muted text-xs mt-0.5">{block.questions.length} preguntas guía · {block.tool}</p>
+                  <div className="flex items-center gap-2 mt-0.5">
+                    <p className="text-muted text-xs">{block.questions.length} preguntas guía</p>
+                    <span
+                      className="text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-full text-white"
+                      style={{ backgroundColor: toolColor }}
+                    >
+                      {block.tool}
+                    </span>
+                  </div>
                 </div>
 
                 <ChevronDown

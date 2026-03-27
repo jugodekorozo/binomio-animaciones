@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Home, CalendarDays, BookOpen, Layers, Users, GitBranch } from 'lucide-react'
+import { Home, CalendarDays, BookOpen, Layers, Users } from 'lucide-react'
 import LogoDG from './LogoDG'
 
 const navItems = [
@@ -8,7 +8,6 @@ const navItems = [
   { key: 'investigacion', label: 'Invest.',   Icon: BookOpen },
   { key: 'tecnica',       label: 'Técnica',   Icon: Layers },
   { key: 'equipo',        label: 'Equipo',    Icon: Users },
-  { key: 'flujo',         label: 'Flujo',     Icon: GitBranch },
 ]
 
 export default function Nav({ scrollTo, sectionRefs }) {
