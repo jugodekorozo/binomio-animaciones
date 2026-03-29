@@ -75,6 +75,18 @@ export const departments = [
           'Ajustar diseños según retroalimentación del Director Creativo',
         ],
       },
+      {
+        name: 'Katy Guerrero',
+        role: 'Diseñadora de Escenarios',
+        confirmed: true,
+        tasks: [
+          'Diseñar escenarios y ambientes según la narrativa de cada pieza',
+          'Definir composición espacial, utilería y atmósfera visual de los fondos',
+          'Mantener coherencia con la guía de estilo y la paleta aprobada',
+          'Preparar fondos por capas para facilitar integración en animación',
+          'Ajustar escenarios según retroalimentación de dirección de arte',
+        ],
+      },
       { name: 'Pendiente', role: 'Diseñador/a de Fondos',    confirmed: false },
     ],
   },
@@ -85,6 +97,26 @@ export const departments = [
     icon: 'Zap',
     members: [
       { name: 'Pendiente', role: 'Motion Graphics Designer', confirmed: false },
+    ],
+  },
+  {
+    id: 'coloristas',
+    label: 'Coloristas',
+    color: '#6C9A8B',
+    icon: 'Droplets',
+    members: [
+      {
+        name: 'Andrés Ruíz',
+        role: 'Colorista',
+        confirmed: true,
+        tasks: [
+          'Definir y aplicar criterios de color según la guía visual del proyecto',
+          'Unificar tratamiento cromático entre personajes, fondos y composiciones',
+          'Preparar versiones finales con color listo para animación y postproducción',
+          'Ajustar contraste, jerarquía visual y lectura de cada escena',
+          'Coordinar con dirección de arte para mantener coherencia estética',
+        ],
+      },
     ],
   },
   {
@@ -141,7 +173,7 @@ export const departments = [
         ],
       },
       {
-        name: 'Salas',
+        name: 'Luis Arias',
         role: 'Animador',
         confirmed: true,
         tasks: [
